@@ -6,28 +6,35 @@ void main() {
   // Link to center image: https://mclarencollege.in/images/9fc76a72-5b06-432f-b92e-d41d8ad5629f.jpg
 
   runApp(
-    MaterialApp(
-      home:Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-          title: Text('I love Flutter'),
-          backgroundColor: Colors.blue.shade900,
+          MaterialApp(
+                      home:Scaffold(
+                                    backgroundColor: Colors.white,
+                                    appBar: AppBar(
+                                                    leading:Image(
+                                                      image: NetworkImage('https://mclarencollege.in/images/icon.png'),
 
-        ),
-        body:Center(
-          child:Image(
-            image: NetworkImage('https://mclarencollege.in/images/9fc76a72-5b06-432f-b92e-d41d8ad5629f.jpg'),
+                                                    ),
+                                                    title: Text('I love Flutter'),
+                                                    backgroundColor: Colors.blue.shade100,
 
-            ),
+                                                    ),
+                                    body:Center(
+                                                child:Image(
+                                                  image: NetworkImage('https://mclarencollege.in/images/9fc76a72-5b06-432f-b92e-d41d8ad5629f.jpg'),
 
-          ),
-        body:BannerLocation.topStart(
-          child:Image(
-            image:NetworkImage('https://mclarencollege.in/images/icon.png'),
-          )
-        )
-        ),
-      ),
+                                                  ),
 
-  );
+                                               ),
+                                     floatingActionButton:FloatingActionButton
+                                                          (
+                                                           onPressed: () {},
+                                                           child:Image(
+                                                             image: NetworkImage('https://mclarencollege.in/images/icon.png'),
+                                                                        )
+                                                           ),
+
+                                    ),
+                      ),
+
+          );
 }
